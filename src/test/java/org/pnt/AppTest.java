@@ -3,6 +3,7 @@ package org.pnt;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -20,7 +21,9 @@ public class AppTest {
     }
 
     @Test
-    public void test1() {
+    public void test1() throws InterruptedException {
+        driver.findElement(By.xpath("//input[@class='gLFyf gsfi']")).sendKeys("What is selenium?");
+        Thread.sleep(3000);
 
     }
 
